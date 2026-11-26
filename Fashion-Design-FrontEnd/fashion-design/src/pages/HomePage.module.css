@@ -1,0 +1,135 @@
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.6rem;
+  color: #7b3f52;
+  margin: 0 0 4px;
+}
+.date {
+  color: #6b625b;
+  font-size: 0.9rem;
+}
+.quickActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ── Section title ── */
+.sectionTitle {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #2a2623;
+}
+.sub { font-weight: 400; color: #6b625b; font-size: 0.9rem; }
+.muted { color: #6b625b; font-size: 0.95rem; }
+
+/* ── Search ── */
+.searchCard { position: relative; display: flex; flex-direction: column; gap: 10px; }
+.searchLabel { font-weight: 600; font-size: 0.95rem; }
+.searchResults {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e6e0d9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.searchRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  color: #2a2623;
+  text-decoration: none;
+  border-bottom: 1px solid #f0ebe4;
+}
+.searchRow:hover { background: #faf8f5; }
+.searchName  { font-weight: 500; }
+.searchPhone { color: #6b625b; font-size: 0.9rem; }
+.searchMeasure { color: #6b625b; font-size: 0.85rem; }
+.noResult { padding: 12px 16px; color: #6b625b; font-size: 0.9rem; }
+
+/* ── Stage tiles ── */
+.stageTiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+@media (max-width: 700px) { .stageTiles { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 450px) { .stageTiles { grid-template-columns: repeat(2, 1fr); } }
+
+.stageTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  text-align: center;
+}
+.stageCount { font-size: 2rem; font-weight: 700; color: #2a2623; line-height: 1; }
+.stageNote  { font-size: 0.75rem; color: #6b625b; }
+
+/* ── Tables ── */
+.tableCard { padding: 0; overflow: hidden; }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.table th {
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b625b;
+  border-bottom: 1px solid #e6e0d9;
+  white-space: nowrap;
+}
+.table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid #f0ebe4;
+  color: #2a2623;
+}
+.table tr:last-child td { border-bottom: none; }
+.clickRow { cursor: pointer; }
+.clickRow:hover td { background: #faf8f5; }
+.balance { font-weight: 600; color: #7b3f52; }
+.balanceTotal { font-size: 0.95rem; font-weight: 600; color: #7b3f52; }
+
+/* ── Client chips ── */
+.clientChips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+.clientChip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #2a2623;
+  transition: box-shadow 0.15s;
+}
+.clientChip:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.chipName  { font-weight: 600; }
+.chipPhone { font-size: 0.85rem; color: #6b625b; }
+

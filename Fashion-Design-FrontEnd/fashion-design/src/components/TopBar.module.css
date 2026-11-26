@@ -1,0 +1,55 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e0d9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #7b3f52;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.link {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: #2a2623;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.15s;
+  min-height: 44px;           /* touch target */
+  display: inline-flex;
+  align-items: center;
+}
+
+.link:hover {
+  background: #f4f0eb;
+}
+
+.link:focus-visible {
+  outline: 2px solid #7b3f52;
+  outline-offset: 2px;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 2px solid #7b3f52;
+  color: #7b3f52;
+}
+
